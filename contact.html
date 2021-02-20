@@ -102,7 +102,7 @@
                                         Bel mij
                                     </div>
                                     <div class="ci-text">
-                                        <a href="tel:+32475676286">+32 4 7567 6286</a>
+                                        <a href="tel:+32475676286">+32 475 67 62 86</a>
                                     </div>
                                 </div>
                             </div>
@@ -149,10 +149,11 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
 
-                        <form class="form contact-form" id="contact_form">
+                        <form class="form contact-form" id="contact_form" action="./php/mailer.php">
                             <div class="clearfix">
 
                                 <div class="cf-left-col">
+                                    <input type="hidden" id="page" name="page" value="contact" method="POST">
 
                                     <!-- Name -->
                                     <div class="form-group">
@@ -170,7 +171,7 @@
 
                                     <!-- Message -->
                                     <div class="form-group">
-                                        <textarea name="message" id="message" class="input-md round form-control" style="height: 84px;" placeholder="Bericht"></textarea>
+                                        <textarea name="message" id="message" class="input-md round form-control" style="height: 84px;" placeholder="Bericht" required></textarea>
                                     </div>
 
                                 </div>
