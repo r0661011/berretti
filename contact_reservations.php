@@ -1,6 +1,3 @@
-
-
-
 <?php
 if($_POST)
 {
@@ -45,11 +42,6 @@ if($_POST)
 		die($output);
 	}
 	
-	if(strlen($user_Phone)<4) // If length is less than 4 it will throw an HTTP error.
-	{
-		$output = json_encode(array('type'=>'error', 'text' => 'Phone is too short or empty!'));
-		die($output);
-	}
 	
 	//proceed with PHP email.
 	$headers = 'X-Mailer: PHP/' . phpversion();
