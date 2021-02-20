@@ -27,9 +27,6 @@ if($_POST)
 
 	//Sanitize input data using PHP filter_var().
 	$user_Name        = filter_var($_POST["userName"], FILTER_SANITIZE_STRING);
-	$user_Phone       = filter_var($_POST["userPhone"], FILTER_SANITIZE_STRING);
-	$user_Date        = filter_var($_POST["userDate"], FILTER_SANITIZE_STRING);
-	$user_Time        = filter_var($_POST["userTime"], FILTER_SANITIZE_STRING);
 	$user_Message     = filter_var($_POST["userMessage"], FILTER_SANITIZE_STRING);
 	
 	$user_Message = str_replace("\&#39;", "'", $user_Message);
@@ -46,7 +43,7 @@ if($_POST)
 	//proceed with PHP email.
 	$headers = 'X-Mailer: PHP/' . phpversion();
 	
-	$sentMail = @mail($to_Email, $subject, $user_Message . "\r\n\n"  .'Name: '.$user_Name. "\r\n" .'Phone: '.$user_Phone. "\r\n" .'Date: '.$user_Date. "\r\n" .'Time: '.$user_Time, $headers);
+	$sentMail = @mail($to_Email, $subject, $user_Message . "\r\n\n"  .'Name: '.$user_Name. "\r\n", $headers);
 	
 	if(!$sentMail)
 	{
