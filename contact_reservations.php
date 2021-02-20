@@ -22,7 +22,7 @@ if($_POST)
     } 
 	
 	//check $_POST vars are set, exit if any missing
-	if(!isset($_POST["userName"]) || !isset($_POST["userPhone"]))
+	if(!isset($_POST["userName"]) || !isset($_POST["userMessage"]))
 	{
 		$output = json_encode(array('type'=>'error', 'text' => 'Input fields are empty!'));
 		die($output);
