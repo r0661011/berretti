@@ -19,8 +19,8 @@ $(document).ready(function(){
             $('input[name=name]').css('border-color', '#e41919');
             proceed = false;
         }
-        if (user_phone == "") {
-            $('input[name=phone]').css('border-color', '#e41919');
+        if (user_email == "") {
+            $('input[name=email]').css('border-color', '#e41919');
             proceed = false;
         }
         
