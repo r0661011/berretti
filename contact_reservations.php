@@ -28,6 +28,7 @@ if($_POST)
 	//Sanitize input data using PHP filter_var().
 	$user_Name        = filter_var($_POST["userName"], FILTER_SANITIZE_STRING);
 	$user_Message     = filter_var($_POST["userMessage"], FILTER_SANITIZE_STRING);
+	$user_Email     = filter_var($_POST["userEmail"], FILTER_SANITIZE_STRING);
 	
 	$user_Message = str_replace("\&#39;", "'", $user_Message);
 	$user_Message = str_replace("&#39;", "'", $user_Message);

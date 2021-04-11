@@ -9,6 +9,7 @@ $(document).ready(function(){
         var user_phone = $('input[name=phone]').val();
         var user_date = $('input[name=date]').val();
         var user_time = $('input[name=time]').val();
+        var user_email = $('input[name=email]').val();
         var user_message = $('textarea[name=message]').val();
         
         //simple validation at client's end
@@ -28,6 +29,7 @@ $(document).ready(function(){
             //data to be sent to server
             post_data = {
                 'userName': user_name,
+                'userEmail': user_email,
                 'userPhone': user_phone,
                 'userDate': user_date,
                 'userTime': user_time,
