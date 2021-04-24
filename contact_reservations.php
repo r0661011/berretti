@@ -44,7 +44,7 @@ if($_POST)
 	//proceed with PHP email.
 	$headers = 'X-Mailer: PHP/' . phpversion();
 	
-	$sentMail = @mail($to_Email, $subject, $user_Message . "\r\n\n"  .'Name: '.$user_Name. "\r\n", $headers);
+	$sentMail = @mail($to_Email, $subject, $user_Message . "\r\n\n"  .'Name: '.$user_Name. "\r\n" .'Email: '.$user_Email. "\r\n", $headers);
 	
 	if(!$sentMail)
 	{
