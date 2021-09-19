@@ -1134,7 +1134,7 @@ function initWorkFilter(){
      });
      
      // Lazy loading plus isotope filter
-     $(".img-lazy-work").load(function(){
+     $(".img-lazy-work").on('load', function(){
          masonry_update();
      });     
      function masonry_update(){
