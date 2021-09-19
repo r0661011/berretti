@@ -211,11 +211,7 @@ html, body{
     -moz-animation-delay: 0.75s;
     animation-delay: 0.75s;
 }
-.mask-speed{
-    -webkit-animation-duration: 0.25s !important;
-    -moz-animation-duration: 0.25s !important;
-    animation-duration: 0.25s !important;
-} 
+
 iframe{
     border: none;
 }

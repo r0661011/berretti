@@ -6,7 +6,7 @@
      Scripts initialization
      --------------------------------------------- */
     
-    $(window).load(function(){
+    $(window).on('load', function(){
         
         // Page loader
         
