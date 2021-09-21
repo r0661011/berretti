@@ -47,6 +47,15 @@
     ExpiresByType application/zip A31536000
 </IfModule>
 
-<filesMatch ".(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf|JPG|MP4)$">
+<FilesMatch ".(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf|JPG|MP4)$">
     Header set Cache-Control "max-age=31536000, public"
+</FilesMatch>
 
+RewriteEngine on
+
+
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [NC,L,R]
+
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^ %{REQUEST_URI}.html [NC,L]
