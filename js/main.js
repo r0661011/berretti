@@ -131,15 +131,15 @@
             result.textContent = "";
             result.className = "form-result";
 
-            fetch("contact-handler.php", {
+            fetch("https://formsubmit.co/ajax/erik.bervoets10@gmail.com", {
                 method: "POST",
                 body: new FormData(form),
-                headers: { "X-Requested-With": "XMLHttpRequest" }
+                headers: { "Accept": "application/json" }
             })
                 .then(function (r) { return r.json(); })
                 .then(function (data) {
-                    if (data.type === "message") {
-                        result.textContent = data.text;
+                    if (data.success === "true" || data.success === true) {
+                        result.textContent = "Bedankt! Uw bericht is verstuurd. Ik neem zo snel mogelijk contact met u op.";
                         result.classList.add("ok");
                         form.reset();
                         if (typeof dataLayer !== "undefined") {

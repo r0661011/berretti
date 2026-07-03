@@ -47,7 +47,7 @@
     </header>
 
     <!-- Page hero -->
-    <section class="page-hero" style="background-image:url('images/berretti/home-parallax-02_optimized.jpg')">
+    <section class="page-hero" style="background-image:url('images/berretti/home-parallax-02.JPG')">
         <div class="container">
             <div class="crumb"><a href="index">Home</a> / Contact</div>
             <h1>Contact</h1>
@@ -94,7 +94,9 @@
                 <div class="reveal">
                     <h2>Vraag een gratis offerte aan</h2>
                     <p style="color:var(--gray)">Vul het formulier in en ik neem zo snel mogelijk contact met u op. Bellen of WhatsAppen mag natuurlijk ook altijd.</p>
-                    <form class="form" id="contact-form" method="POST" action="contact-handler.php">
+                    <form class="form" id="contact-form" method="POST" action="https://formsubmit.co/erik.bervoets10@gmail.com">
+                        <input type="hidden" name="_subject" value="Nieuwe aanvraag via berretti.be">
+                        <input type="hidden" name="_template" value="table">
                         <div class="form-row">
                             <div>
                                 <label for="name">Naam *</label>
@@ -127,7 +129,7 @@
                             <textarea id="message" name="message" required minlength="5" placeholder="Beschrijf kort wat u wenst te laten uitvoeren…"></textarea>
                         </div>
                         <!-- honeypot, invisible for humans -->
-                        <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+                        <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
                         <div>
                             <button type="submit" class="btn">Verstuur bericht</button>
                         </div>
