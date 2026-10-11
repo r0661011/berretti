@@ -1,0 +1,8 @@
+.git
+.github
+.assetsignore
+.claude
+.DS_Store
+.htaccess
+Thumbs.db
+wrangler.jsonc
