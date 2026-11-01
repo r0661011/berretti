@@ -6,3 +6,4 @@
 .htaccess
 Thumbs.db
 wrangler.jsonc
+worker.js
