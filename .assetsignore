@@ -7,3 +7,5 @@
 Thumbs.db
 wrangler.jsonc
 worker.js
+.wrangler
+.gitignore
