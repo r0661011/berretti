@@ -688,5 +688,3 @@ h3 { font-size: 1.25rem; }
 }
 .whatsapp-fab:hover { transform: scale(1.08); }
 .whatsapp-fab svg { width: 32px; height: 32px; fill: #fff; }
-
-.nowrap { white-space: nowrap; }
