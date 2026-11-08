@@ -9,4 +9,3 @@ wrangler.jsonc
 worker.js
 .wrangler
 .gitignore
-mock-*.html
